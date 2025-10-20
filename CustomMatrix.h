@@ -32,6 +32,34 @@ public:
             }
         }
     }
+
+    bool isPixelNotEmpty() const
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                if (mat[i][j])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    void print() const
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                cout << (mat[i][j] ? "1" : "0");
+            }
+
+            cout << endl;
+        }
+    }
 };
 
 #endif // CUSTOMMATRIX_H
